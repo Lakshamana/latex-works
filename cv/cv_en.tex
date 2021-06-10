@@ -1,0 +1,133 @@
+%! TEX program = xelatex
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Guilherme Smethurst Albuquerque
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Birth Date:} & Recife-PE, Brasil  | 17 Junho 1997 \\
+    \textsc{Address:}   & Vila Anésia Meira, Bairro São Brás, Belém, PA, Brasil \\
+    \textsc{Phone:}     & +55 91 988071288\\
+    \textsc{email:}     &  \href{mailto:guilherme.smta@gmail.com}{guilherme.smta@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Mar 2021 - Now} & Salesforce Developer at Top Information\\
+ & \footnotesize{Mostly working to optimize systems and fix business rules bugs, by using Apex. 
+    Also maintaining PwC's Balanced Scorecard (Vue.js + Adonis.js) as one of freelancer jobs.}\\
+ \emph{Mar 2020} & Node.js Backend Developer at Abacomm\\
+ & \footnotesize{Just delivered a AWS Lambda+DynamoDB-based application, with focus at ReST endpoints design and DynamoDB KeySchema design and query optimization as well.} \\
+ & \footnotesize{Working as Fullstack Developer for a project for corporate business system known as Balanced Scorecard (BSC) for Pricewaterhouse Coopers (PwC)} \\\\\textsc{
+ Aug 2019} & Developer at Department of Informational Products at Federal University of Para's Central Library\\ 
+ & \footnotesize{Responsibility of re-designing and developing a system intended to serve user's catalog cards to their academic works (FICAT)} \\\\
+ \textsc{Aug 2018 }& Software solutions development for software process improvement\\& \footnotesize{Has refactored and developed source code to SPM (Software Process Marketplace) system, developed originally by LABES team, in 2009}\\\\
+ \textsc{Jun 2017} & Developer at Software Engineering Laboratory at Federal University of Para \\ &\footnotesize{Has developed source code solutions to WebAPSEE system, developed originally by LABES team, in 2006}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+\section{Academic Research Experiences}
+\begin{tabular}{r|p{11cm}}
+ \emph{2018} & Campos, U. F., Albuquerque S. G. et al (2018)\\
+ & \textit{Mining Rule Violations in JavaScript Code Snippets}\\
+ & MSR 2019 Mining Challenge\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{May} 2016-Present & Ingraduate in \textsc{Computer Science}, \\
+& \textbf{Federal University of Para}, Belem-PA, Brazil
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Certificates}
+\begin{tabular}{rl}
+ \textsc{Sept.} 2016 & Advanced informatic course (\textsc{Eurodata}, Ananindeua-PA)\\
+\textsc{December} 2017 & Smart search algorithms\\ & (\textsc{Udemy}, \footnotesize{certificate available in \href{https://www.udemy.com/certificate/UC-9414I0UR/}{this link}})\\
+\textsc{Julho} 2019 &  Build Web Applications with the new Angular (4, 5 e 6)\\ & (\textsc{Udemy}, \footnotesize{certificate available in \href{https://www.udemy.com/certificate/UC-P6VGWTET/}{neste link}})
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Brazilian Portuguese:}& Mother tongue\\
+\textsc{English:}&B1-B2 worth in general English (no certificates available)\\
+\textsc{Spanish:}&Reads and writes little\\
+\end{tabular}
+
+\section{Abilities}
+\begin{tabular}{rl}
+ Advanced Knowledge:& Linux, Shellscripting, AdonisJS, Vue.js, JavaScript, Node.js,\\& Vue Router, Vuex, DynamoDB, \\& AWS Lambda, Serverless Framework\\\\
+ Intermediate Knowledge:& \textsc{C}, Spring Boot, JPA, Hibernate, JHipster, Python, \\ &HTML, CSS, My\textsc{SQL}, Bootstrap, Bulma,\\& TypeScript, DOM, Lucid ORM\\& Nuxt.js, Koa.js, Bookshelf.js, JWT Auth,\\&Angular 4+\\\\
+ Basic Knowledge: & PostgreSQL, Knex, Electron, Jest, Chai, \\  & Electron, Docker, Apache Kafka, C++\\
+ &React.js, Redux, LaTeX
+\end{tabular}
+
+\section{Util Links}
+\href{https://github.com/Lakshamana}{GitHub}, \href{https://www.linkedin.com/in/guilherme-albuquerque-622421127}{LinkedIn}\\
+
+\section{Interests \& Activities}
+Tecnology, Open-Source Programming, Desktop and Web Programming, \\Software Engineering, Fullstack Development, Productivity, Vim/NVim lifestyle
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+\end{document}

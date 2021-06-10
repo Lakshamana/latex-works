@@ -1,0 +1,19 @@
+# Xelatex + Latexmk compilation files
+
+/**/*.pdf
+/**/*.aux
+/**/*.out
+/**/*.gz
+/**/*.xdv
+/**/*.fls
+/**/*.log
+/**/*.fdb_latexmk
+
+*.pdf
+*.aux
+*.out
+*.gz
+*.xdv
+*.fls
+*.log
+*.fdb_latexmk
