@@ -50,6 +50,19 @@ ItalicFont = Fontin-Italic.otf
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
 \pagestyle{empty} % non-numbered pages
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
@@ -64,25 +77,27 @@ ItalicFont = Fontin-Italic.otf
 \section{Dados Pessoais}
 
 \begin{tabular}{rl}
-    \textsc{Lugar e data de nascimento:} & Recife-PE, Brasil  | 17 Junho 1997 \\
-    \textsc{Endereço:}   & Vila Anésia Meira, Bairro São Brás, Belém, PA, Brasil \\
-    \textsc{Fone:}     & +55 91 988071288\\
+    \textsc{Lugar e ano de nascimento:} & Recife-PE, Brasil  | 1997 \\
     \textsc{email:}     &  \href{mailto:guilherme.smta@gmail.com}{guilherme.smta@gmail.com}
 \end{tabular}
 
 \section{Objetivo}
-Área de desenvolvimento de software
+Área de desenvolvimento de software, mais especificamente desenvolvimento backend
 
 %Section: Work Experience at the top
 \section{Experiências de Trabalho}
 \begin{tabular}{r|p{11cm}}
-\emph{Mar 2021 - Atual} & Desenvolvedor Salesforce em Top Information
- \\ & \footnotesize{Mostly working to optimize systems and fix business rules bugs, by using Apex. Also maintaining PwC's Balanced Scorecard (Vue.js + Adonis.js) as one of freelancer jobs.}\\
- \emph{Mar 2020} & Node.js Backend Developer at Abacomm
- \\ & \footnotesize{Just delivered a AWS Lambda+DynamoDB-based application, with focus at ReST endpoints design and DynamoDB KeySchema design and query optimization as well.} \\
- & \footnotesize{Working as Fullstack Developer for a project for corporate business system known as Balanced Scorecard (BSC) for Pricewaterhouse Coopers (PwC)} \\
- \emph{Aug 2019} & Desenvolvedor Fullstack no Departamento de Produtos Informacionais da Biblioteca Central UFPA\\ & \footnotesize{Atualmente trabalhando na reegenharia do sistema FICAT. Trata-se de um sistema de geração automática de fichas catalográficas e conta com os módulos de geração das fichas em PDF, estatísticas e gráficos sobre a geração das fichas (com Chart.js) e está sendo desenvolvida em ambiente Node.js (com Koa.js) e frontend Vue.js, embarcados em um projeto com Nuxt.js.} \\
- \textsc{Aug 2018} & \emph{Desenvolvimento de soluções de \textit{software} para melhoria de processos de \textit{software}}\\& \footnotesize{Atualmente refatorando e desenvolvendo código-fonte para o sistema SPM (Software Process Marketplace)}\\
+\emph{Dez 2021 - Now} & Desenvolvedor Node.js em FanHero
+ \\ & \footnotesize{Trabalhando na reengenharia de um sistema complexo de OTT, video sob demanda, gerenciamento de conteudo e mais (veja mais em \href{https://fanhero.com}{FanHero}). Stack baseada em Node.js/NestJS/GraphQL/REsT/Redis/MongoDB}\\\\
+\emph{Jul 2021 - Now} & Desenvolvedor Node.js em Compasso UOL
+ \\ & \footnotesize{Trabalhando na manutenção e novas features para microsserviços em Node.js, Express.js, bem como novas features em um gateway de serviços (Node.js/Express.js/Apache Kafka/Docker/Jenkins}\\\\
+\emph{Mar 2021} & Desenvolvedor Salesforce em Top Information
+ \\ & \footnotesize{Trabalhando para manutenção e otimização de sistemas, bem como reparos em bugs de regras de negócio. Também fazendo manutenção do sistema BSC - PwC (Vue.js + Adonis.js) como um trabalho freelancer}\\\\
+ \emph{Mar 2020} & Desenvolvedor Node.js em Abacomm
+ \\ & \footnotesize{Entregou aplicações baseadas na stack AWS Lambda+DynamoDB, com foco em segurança e otimização de queries} \\
+ & \footnotesize{Trabalhou como desenvolvedor fullstack (Vue.js/AdonisJS) em sistema corporativo para a empresa de auditoria Pricewaterhouse Coopers (PwC), com foco na integracao entre API e front-end, fluxo de dados da aplicação, bem como boas práticas de UX com formulários e validação} \\\\
+ \emph{Aug 2019} & Desenvolvedor Fullstack no Departamento de Produtos Informacionais da Biblioteca Central UFPA\\ & \footnotesize{Trabalhou na reegenharia do sistema FICAT. Trata-se de um sistema de geração automática de fichas catalográficas e conta com os módulos de geração das fichas em PDF, estatísticas e gráficos sobre a geração das fichas (com Chart.js) e está sendo desenvolvida em ambiente Node.js (com Koa.js) e frontend Vue.js, embarcados em um projeto com Nuxt.js.} \\\\
+ \textsc{Aug 2018} & Desenvolvimento de soluções de \textit{software} para melhoria de processos de \textit{software}\\& \footnotesize{Atualmente refatorando e desenvolvendo código-fonte para o sistema SPM (Software Process Marketplace)}\\\\
  \textsc{Jun 2017} & Desenvolvedor em Laboratório de Engenharia de \textit{software} - Universidade Federal do Pará \\ & \footnotesize{Desenvolveu soluções em código-fonte para o módulo de Gerência de Configuração de Software para o sistema WebAPSEE}\\\multicolumn{2}{c}{} \\
 \end{tabular}
 
@@ -96,14 +111,13 @@ ItalicFont = Fontin-Italic.otf
 %Section: Education
 \section{Formação Acadêmica}
 \begin{tabular}{rl}	
- \textsc{Maio} 2016-Presente & Graduando em \textsc{Ciência da Computação}, \\
+ \textsc{Maio} 2016-Dezembro 2018 & Graduando em \textsc{Ciência da Computação}, \\
 & \textbf{Universidade Federal do Pará}, Belém-PA, Brasil
 \end{tabular}
 
 %Section: Scholarships and additional info
 \section{Formação Complementar}
 \begin{tabular}{rl}
- \textsc{Set.} 2016 & Curso Básico e Avançado de Informática (\textsc{Eurodata}, Ananindeua-PA)\\
 \textsc{Dezembro} 2017 & Curso de Algoritmos Inteligentes de Busca\\ & (\textsc{Udemy}, \footnotesize{currículo disponível \href{https://www.udemy.com/certificate/UC-9414I0UR/}{neste link}})\\
 \textsc{Julho} 2019 &  Construindo Aplicações Web Com o Novo Angular (4, 5 e 6)\\ & (\textsc{Udemy}, \footnotesize{currículo disponível \href{https://www.udemy.com/certificate/UC-P6VGWTET/}{neste link}})
 \end{tabular}
@@ -118,17 +132,17 @@ ItalicFont = Fontin-Italic.otf
 
 \section{Habilidades}
 \begin{tabular}{rl}
- Conhecimento Avançado:& Linux, Shellscripting, AdonisJS, Vue.js, Node.js, Vue Router, Vuex, DynamoDB, \\& AWS Lambda, Serverless Framework\\\\
- Conhecimento Intermediário:& \textsc{C}, Java, Spring Boot, JPA, Hibernate, JHipster, Python, \\ &HTML, CSS, My\textsc{SQL}, Bootstrap, Bulma,\\& JavaScript, TypeScript, DOM, Lucid ORM\\& Nuxt.js, Koa.js, Bookshelf.js, JWT Auth,\\&Angular 4+\\\\
- Conhecimento básico: & PostgreSQL, Knex, Electron, Jest, Chai, \\ & Electron, Docker, Nginx, Apache Kafka, C++\\
- &React.js, Redux, LaTeX
+ Conhecimento Avançado:& Linux, Shellscripting, AdonisJS, NestJS\\& JavaScript, TypeScript, Vue.js, Node.js, Vue Router, Vuex, \\&DynamoDB, AWS Lambda, GraphQL, Serverless Framework\\\\
+ Conhecimento Intermediário:& \textsc{C}, Python\\ &HTML, CSS, My\textsc{SQL}, Bootstrap, Bulma,\\& DOM, Lucid ORM\\& Nuxt.js, Koa.js, Bookshelf.js, JWT Auth,\\&Angular 4+, MongoDB, Docker\\\\
+ Conhecimento básico: & PostgreSQL, Knex, Electron, Chai, \\ & Electron, Nginx, Redis, Apache Kafka, C++,  {\fb\LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf},\\
+ &React.js, Redux, Jenkins
 \end{tabular}
 
 \section{Links Úteis}
-\href{https://github.com/Lakshamana}{GitHub}, \href{https://www.linkedin.com/in/guilherme-albuquerque-622421127}{LinkedIn}\\
+\href{https://github.com/Lakshamana}{GitHub}, \href{https://www.linkedin.com/in/guilherme-albuquerque-622421127}{LinkedIn}\\ 
 
 \section{Interesses e Atividades}
-Tecnology, Open-Source Programming, Desktop e Web, \\Software Engineering, Fullstack Development, Productivity, Vim/NVim lifestyle
+Tecnology, Open-Source Programming, Desktop e Web, \\Software Engineering, Fullstack Development, Productivity, Vim/Terminal lifestyle
 
 %\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
-\end{document}
+\end{document}/
