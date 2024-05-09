@@ -1,0 +1,149 @@
+%! TEX program = xelatex
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Letícia Figueiredo Carrera
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Dados Pessoais}
+
+\begin{tabular}{rl}
+    \textsc{Lugar e ano de nascimento:} & Recife-PE, Brasil  | 1997 \\
+    \textsc{email:}     &  \href{mailto:guilherme.smta@gmail.com}{guilherme.smta@gmail.com}
+\end{tabular}
+
+\section{Objetivo}
+Área de desenvolvimento de software, mais especificamente desenvolvimento backend
+
+%Section: Work Experience at the top
+\section{Experiências de Trabalho}
+\begin{tabular}{r|p{11cm}}
+\textsc{Dez 2021} & Desenvolvedor Node.js em FanHero
+ \\ & \footnotesize{Trabalhou na reengenharia de um sistema complexo de OTT, video sob demanda, gerenciamento de conteudo e mais (veja mais em \href{https://fanhero.com}{FanHero}). Stack baseada em Node.js/NestJS/GraphQL/REsT/Redis/MongoDB}\\\\
+\textsc{Jul 2021} & Desenvolvedor Node.js em Compasso UOL
+ \\ & \footnotesize{Trabalhou na manutenção e novas features para microsserviços em Node.js, Express.js, bem como novas features em um gateway de serviços (Node.js/Express.js/Apache Kafka/Docker/Jenkins}\\\\
+\textsc{Mar 2021} & Desenvolvedor Salesforce em Top Information
+ \\ & \footnotesize{Trabalhou para manutenção e otimização de sistemas, bem como reparos em bugs de regras de negócio. Também fez manutenção do sistema BSC - PwC (Vue.js + Adonis.js) como um trabalho freelancer}\\\\
+ \textsc{Mar 2020} & Desenvolvedor Node.js em Abacomm
+ \\ & \footnotesize{Entregou aplicações baseadas na stack AWS Lambda+DynamoDB, com foco em segurança e otimização de queries} \\
+ & \footnotesize{Trabalhou como desenvolvedor fullstack (Vue.js/AdonisJS) em sistema corporativo para a empresa de auditoria Pricewaterhouse Coopers (PwC), com foco na integracao entre API e front-end, fluxo de dados da aplicação, bem como boas práticas de UX com formulários e validação} \\\\
+ \textsc{Aug 2019} & Desenvolvedor Fullstack no Departamento de Produtos Informacionais da Biblioteca Central UFPA\\ & \footnotesize{Trabalhou na reegenharia do sistema FICAT. Trata-se de um sistema de geração automática de fichas catalográficas e conta com os módulos de geração das fichas em PDF, estatísticas e gráficos sobre a geração das fichas (com Chart.js) e está sendo desenvolvida em ambiente Node.js (com Koa.js) e frontend Vue.js, embarcados em um projeto com Nuxt.js.} \\\\
+ \textsc{Aug 2018} & Desenvolvimento de soluções de \textit{software} para melhoria de processos de \textit{software}\\& \footnotesize{Refatorou e desenvolveu código-fonte para o sistema SPM (Software Process Marketplace)}\\\\
+ \textsc{Jun 2017} & Desenvolvedor em Laboratório de Engenharia de \textit{software} - Universidade Federal do Pará \\ & \footnotesize{Desenvolveu soluções em código-fonte para o módulo de Gerência de Configuração de Software para o sistema WebAPSEE}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+\section{Experiências de Pesquisa Acadêmica}
+\begin{tabular}{r|p{11cm}}
+ \emph{2018} & Campos, U. F., Albuquerque S. G. et al (2018)\\
+ & \textit{Mining Rule Violations in JavaScript Code Snippets}\\
+ & MSR 2019 Mining Challenge\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Education
+\section{Formação Acadêmica}
+\begin{tabular}{rl}	
+ \textsc{Maio} 2016-Dezembro 2019 & Graduando em \textsc{Ciência da Computação}, \\
+& \textbf{Universidade Federal do Pará}, Belém-PA, Brasil
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Formação Complementar}
+\begin{tabular}{rl}
+\textsc{Dezembro} 2017 & Curso de Algoritmos Inteligentes de Busca\\ & (\textsc{Udemy}, \footnotesize{currículo disponível \href{https://www.udemy.com/certificate/UC-9414I0UR/}{neste link}})\\
+\textsc{Julho} 2019 &  Construindo Aplicações Web Com o Novo Angular (4, 5 e 6)\\ & (\textsc{Udemy}, \footnotesize{currículo disponível \href{https://www.udemy.com/certificate/UC-P6VGWTET/}{neste link}})
+\end{tabular}
+
+%Section: Languages
+\section{Linguagens}
+\begin{tabular}{rl}
+ \textsc{Português Brasileiro:} & Língua materna \\
+ \textsc{Inglês:} & Nível equivalente a B1-B2 em inglês geral \\
+ \textsc{Espanhol:} & Lê e escreve pouco \\
+\end{tabular}
+
+\section{Habilidades}
+\begin{tabular}{rl}
+    Conhecimento Avançado:& Linux, Shellscripting, AdonisJS, NestJS\\& JavaScript, TypeScript, Vue.js, Node.js, Vue Router, Vuex, \\&DynamoDB, AWS Lambda, GraphQL, \\&Serverless Framework\\\\
+ Conhecimento Intermediário:& \textsc{C}, Python\\ &HTML, CSS, My\textsc{SQL}, Bootstrap, Bulma,\\& DOM, Lucid ORM\\& Nuxt.js, Koa.js, Bookshelf.js, JWT Auth,\\&Angular 4+, MongoDB, Docker\\\\
+ Conhecimento básico: & PostgreSQL, Knex, Electron, Chai, \\ & Electron, Nginx, Redis, Apache Kafka, C++,  {\fb\LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf},\\
+ &React.js, Redux, Jenkins
+\end{tabular}
+
+\section{Links Úteis}
+\href{https://github.com/Lakshamana}{GitHub}, \href{https://www.linkedin.com/in/guilherme-albuquerque-622421127}{LinkedIn}\\ 
+
+\section{Interesses e Atividades}
+Tecnology, Open-Source Programming, Desktop e Web, \\Software Engineering, Fullstack Development, Productivity, Vim/Terminal lifestyle
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+\end{document}/
+

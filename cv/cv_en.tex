@@ -1,9 +1,8 @@
-%! TEX program = xelatex
+%! TEX program = tectonic
 \documentclass[a4paper,10pt]{article}
 
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -16,23 +15,13 @@
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]
-{Fontin.otf}
-%%%
+\usepackage[OT1]{fontenc}
+\usepackage{ragged2e}
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{10pt}
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-1.3cm}
 
@@ -55,35 +44,48 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
-\par{\centering
-		{\Huge Guilherme Smethurst Albuquerque
-	}\bigskip\par}
-
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Data}
-
-\begin{tabular}{rl}
-    \textsc{Place and Birth Date:} & Recife-PE, Brasil  | 17 Junho 1997 \\
-    \textsc{email:}     &  \href{mailto:guilherme.smta@gmail.com}{guilherme.smta@gmail.com}
+\centering{\huge \textsc{Guilherme Smethurst Albuquerque}}\\
+\centering{Salinopolis/PA, Brazil $\cdot{}$ +55 91 988071288 $\cdot{}$ \texttt{guilherme.smta@gmail.com}}
+\par
+\begin{tabular}{lp{0.7\linewidth}lp{0.3\linewidth}}
+    GitHub: & \texttt{https://github.com/Lakshamana}\\
+    LinkedIn: & \texttt{\small{https://www.linkedin.com/in/guilherme-albuquerque-622421127}}
 \end{tabular}
+\par
+%--------------------SECTIONS-----------------------------------
+\section{Summary}
+\justifying{I am a fullstack developer with 4+ years of experience in the field, with a focus on backend development. I have a keen eye for optimization, which gets me interested for learning Elixir and low-level languages like Rust and Golang. I have worked with a variety of technologies, such as AWS (Lambda, DynamoDB), Docker, MySQL, MongoDB, Redis and Apache Kafka along my experience. I have a BSc in Computer Science for the Federal University of Para, Brazil. I'm a self-taught developer, and I'm always looking for new challenges and opportunities to learn from others, grow and share my knowledge with people}
 
 %Section: Work Experience at the top
 \section{Work Experience}
 \begin{tabular}{r|p{11cm}}
-\textsc{Dec 2021} & Mid-level Node.js Developer at FanHero
- \\ & \footnotesize{Worked on a reimplementation (migration) of a complex OTT, VoD, CMS, and beyond platform (see \href{https://fanhero.com}{FanHero})}\\\\
-\textsc{Jul 2021} & Node.js Developer at Compass UOL
-   \\ & \footnotesize{Maintained and wrote new features for Node.js/Express.js microservices, as well as for a service gateway (Node.js/Express.js/Apache Kafka/Docker/Jenkins)}\\\\
-\textsc{Mar 2021} & Salesforce Developer at Top Information
- \\ & \footnotesize{Maintained and worked on system optimizations, as well as bug-fixing}\\\\
- \textsc{Mar 2020} & Node.js Developer at Abacomm\\
-    & \footnotesize{Delivered a AWS Lambda+DynamoDB-based application, with focus at ReST endpoints design and DynamoDB KeySchema design and query optimization as well.} \\
-    & \footnotesize{Worked as fullstack developer (Vue.js/AdonisJS) in a corporate system for Pricewaterhouse Coopers (PwC), focusing integration, dataflow, also with eyes to UX, forms and validation good practices as well} \\\\
- \textsc{Aug 2019} & Developer at Department of Informational Products at Federal University of Para's Central Library\\ 
-   & \footnotesize{Assumed responsibility for re-designing and developing a system intended to serve user's catalog cards to their academic works (FICAT)} \\\\
- \textsc{Aug 2018 }& Software solutions development for software process improvement\\& \footnotesize{Has refactored and developed source code to SPM (Software Process Marketplace) system, developed originally by LABES team, in 2009}\\\\
- \textsc{Jun 2017} & Developer at Software Engineering Laboratory at Federal University of Para \\ &\footnotesize{Has developed source code solutions to WebAPSEE system, developed originally by LABES team, in 2006}\\\multicolumn{2}{c}{} \\
+\textsc{Fev 2023} & \textbf{Node.js Developer at BrandLovrs}\\
+\footnotesize{\textit{Remote, full-time}}
+  & \footnotesize{Working on a full-featured, LATAM-based Creator Economy platform. Currently developing on a company-owned AWS Lambda serverless architecture pattern for serving \href{https://www.brandlovrs.com/sou-creator}{BrandLovrs creators' app}, as well as other company microservices}\\\\
+\textsc{Dec 2021} & \textbf{Node.js Developer at FanHero}\\
+\footnotesize{\textit{Remote, full-time}}
+  & \footnotesize{Worked on a migration of a complex OTT, VoD, CMS, and beyond platform (see \href{https://fanhero.com}{FanHero}) to a Node.js+GraphQL+MongoDB stack}\\\\
+\textsc{Jul 2021} & \textbf{Node.js Developer at Compass UOL}\\
+\footnotesize{\textit{Remote, full-time}}
+   & \footnotesize{Maintained and wrote new features for Node.js/Express.js microservices, as well as a benefits program service gateway targeting drugstores and pharmacies (Node.js/Express.js/Apache Kafka/Docker/Jenkins)}\\\\
+\textsc{Mar 2021} & \textbf{Salesforce Developer at Top Information}\\
+\footnotesize{\textit{Remote, full-time}}
+ & \footnotesize{Maintained and worked on system optimizations, as well as bug-fixing}\\\\
+\textsc{Mar 2020} & \textbf{Node.js Developer at Abacomm}\\
+\footnotesize{\textit{Remote, full-time}}
+  &\begin{itemize}
+    \item \footnotesize{Delivered a AWS Lambda+DynamoDB-based application, with focus at ReST endpoints design and DynamoDB KeySchema design and query optimization as well}
+    \item \footnotesize{Worked as fullstack developer (Vue.js/AdonisJS) in a corporate system for Pricewaterhouse Coopers (PwC), focusing integration, dataflow, also with eyes to UX, forms and validation good practices as well}
+  \end{itemize}\\
+\textsc{Aug 2019} & \textbf{Developer at Department of Informational Products at Federal University of Para's Central Library}\\
+\footnotesize{\textit{Belem/PA, intern}}
+  & \footnotesize{Assumed responsibility for re-designing and developing a system intended to serve user's catalog cards to their academic works (FICAT)}\\\\
+\textsc{Aug 2018}& \textbf{Software solutions development for software process improvement}\\
+\footnotesize{\textit{Belem/PA, intern}}
+  & \footnotesize{Refactored and developed source code to SPM (Software Process Marketplace) system, developed originally by LABES team, in 2009}\\\\
+\textsc{Jun 2017} & \textbf{Developer at Software Engineering Laboratory at Federal University of Para}\\
+  &\footnotesize{Developed source code solutions (inlucluding Google Drive and Dropbox artifact upload) to WebAPSEE system, developed originally by LABES team, in 2006}\\
+\multicolumn{2}{c}{}\\
 \end{tabular}
 
 \section{Academic Research Experiences}
@@ -96,40 +98,46 @@ ItalicFont = Fontin-Italic.otf
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}	
- \textsc{May} 2016-Present & Ingraduate in \textsc{Computer Science}, \\
+2016-2020 & Graduated in \textsc{Computer Science}, \\
 & \textbf{Federal University of Para}, Belem-PA, Brazil
 \end{tabular}
 
 %Section: Scholarships and additional info
 \section{Certificates}
 \begin{tabular}{rl}
- \textsc{Sept.} 2016 & Advanced informatic course (\textsc{Eurodata}, Ananindeua-PA)\\
 \textsc{December} 2017 & Smart search algorithms\\ & (\textsc{Udemy}, \footnotesize{certificate available in \href{https://www.udemy.com/certificate/UC-9414I0UR/}{this link}})\\
-\textsc{Julho} 2019 &  Build Web Applications with the new Angular (4, 5 e 6)\\ & (\textsc{Udemy}, \footnotesize{certificate available in \href{https://www.udemy.com/certificate/UC-P6VGWTET/}{neste link}})
+\textsc{July} 2019 &  Build Web Applications with the new Angular (4, 5 e 6)\\ & (\textsc{Udemy}, \footnotesize{certificate available in \href{https://www.udemy.com/certificate/UC-P6VGWTET/}{neste link}})
 \end{tabular}
 
 %Section: Languages
 \section{Languages}
 \begin{tabular}{rl}
  \textsc{Brazilian Portuguese:}& Mother tongue\\
-\textsc{English:}&B1-B2 worth in general English (no certificates available)\\
-\textsc{Spanish:}&Reads and writes little\\
+\textsc{English:}&B1-B2 worth in general (no certificates available)\\
+\textsc{Spanish:}&Reads and writes little\\\\
 \end{tabular}
 
-\section{Abilities}
-\begin{tabular}{rl}
- Advanced Knowledge:& Linux, Shellscripting, AdonisJS, NestJS\\& JavaScript, TypeScript, Vue.js, Node.js, Vue Router, Vuex, \\&DynamoDB, AWS Lambda, GraphQL, Serverless Framework\\\\
- Intermediary Knowledge:& \textsc{C}, Python\\ &HTML, CSS, My\textsc{SQL}, Bootstrap, Bulma,\\& DOM, Lucid ORM\\& Nuxt.js, Koa.js, Bookshelf.js, JWT Auth,\\&Angular 4+, MongoDB, Docker\\\\
- Basic Knowledge: & PostgreSQL, Knex, Electron, Chai, \\ & Electron, Nginx, Redis, Apache Kafka, C++,  {\fb\LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf},\\
- &React.js, Redux, Jenkins
+\section{Skills}
+\begin{tabular}{ll}
+  Programming Languages: &\texttt{C, JavaScript},\\
+                         &\texttt{TypeScript, Python, Elixir,}\\
+                         &\texttt{Java, SQL}\\\\
+  Frameworks: &\texttt{Node.js, Express.js, AdonisJS, NestJS,}\\
+              &\texttt{Vue.js, Angular, React}\\\\
+  Databases: &\texttt{MySQL, PostgreSQL, MongoDB, DynamoDB}\\\\
 \end{tabular}
 
-
-\section{Util Links}
-\href{https://github.com/Lakshamana}{GitHub}, \href{https://www.linkedin.com/in/guilherme-albuquerque-622421127}{LinkedIn}\\
+\section{Some relevant projects}
+\begin{flushleft}
+\begin{itemize}
+  \item Wallydator, a TS-based validation runtime $($\texttt{https://github.com/Lakshamana/wallydator}$)$
+  \item Phoenix-based user authentication implementation $($\texttt{https://github.com/Lakshamana/phx\_blog}$)$
+  \item Discuss, a phoenix-based forum still wip, but worth taking a look at $($\texttt{https://github.com/Lakshamana/discuss}$)$
+\end{itemize}
+\end{flushleft}
 
 \section{Interests \& Activities}
-Tecnology, Open-Source Programming, Desktop and Web Programming, \\Software Engineering, Fullstack Development, Productivity, Vim/Terminal lifestyle
+\raggedright{Tecnology, Open-Source Programming, Desktop and Web Programming, Software Engineering, Backend Development, Productivity, Vim/Terminal lifestyle}
 
 %\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
 \end{document}
